@@ -1,4 +1,4 @@
-# Discord Starsky AI Bot
+# Discord Starsky AI ChatBot
 
 Starsky Bot is a Discord bot that interacts with the Starsky API to generate documents and images using AI. This bot allows you to create documents based on templates, retrieve account information, and generate images based on prompts.
 
