@@ -6,22 +6,22 @@
 
 Starsky Bot is a Discord bot that interacts with the Starsky API to generate documents and images using AI. This bot allows you to create documents based on templates, retrieve account information, and generate images based on prompts.
 
-## Features
+## Core Features
 
-- Create documents using various templates.
-- Generate images using the Starsky AI.
-- Retrieve account information from Starsky API.
-- Set up your Starsky API key for authentication.
+- **Document Creation:** Generate documents using various templates.
+- **Image Generation:** Create images using the Starsky AI.
+- **Account Information:** Retrieve information from the Starsky API.
+- **Easy Setup:** Set up your Starsky API key for authentication.
 
 ## Commands
 
 ### `$account`
 
-Retrieve information about your Starsky account, including account name, plan name, total words, and used words.
+Retrieve detailed information about your Starsky account, including account name, plan name, total words, and used words.
 
 ### `$templates [template_id]`
 
-View available templates or create a new document using a selected template. If a `template_id` is provided, the bot will guide you through creating a document with the chosen template.
+View available templates or create a new document using a selected template. If a `template_id` is provided, the bot will guide you through the document creation process with the chosen template.
 
 ### `$image [prompt]`
 
@@ -29,46 +29,57 @@ Generate an image using the Starsky AI based on the provided prompt. This comman
 
 ### `$setup`
 
-Set up your Starsky API key to authenticate with the bot. Follow the prompts to provide your API key.
+Set up your Starsky API key to authenticate with the bot. Follow the prompts to securely provide your API key.
 
 ### `$help`
 
-Display a help message with information about available commands.
+Display a comprehensive help message with information about all available commands.
+
+## System Architecture
+
+The bot integrates various components to provide a seamless experience:
+
+- **Discord Bot API:** Interfaces with Discord to offer an interactive chatbot experience.
+- **Starsky API:** Fetches data for document creation and image generation.
+- **Python Environment:** The entire backend logic is implemented in Python, utilizing libraries for HTTP requests and data management.
+
+## Installation and Setup
+
+The setup process involves configuring the Discord bot and setting up the Python environment:
+
+1. Clone the repository.
+2. Install the required dependencies by running the `install.sh` script:
+    ```bash
+    chmod +x install.sh
+    ./install.sh
+    ```
+3. Insert your Discord bot token at the end of the `bot.py` file:
+    ```python
+    bot.run('YOUR TOKEN GOES HERE')
+    ```
 
 ## Getting Started
 
 1. Invite the bot to your Discord server.
 2. Run the `$setup` command and provide your Starsky API key to authenticate.
-3. Explore available commands to generate documents and images.
+3. Explore the available commands to generate documents and images.
 
-## Dependencies
+## Future Enhancements
 
-- discord.py
-- requests
+Future updates may include additional features such as:
 
-## Note
+- More document templates.
+- Enhanced image generation capabilities.
+- Advanced user customization options.
 
-- Ensure that you've obtained your Starsky API key from https://starsky.pro/developers before using the bot.
+## Contributing to the Project
 
-## Installation
+We welcome contributions from the community to enhance Starsky Bot. For guidelines on contributing, please refer to the Contributing section in the repository.
 
-Before starting the bot, run the `install.sh` script to install the required dependencies:
+## Support and Feedback
 
-```bash
-chmod +x install.sh
-./install.sh
-
-## Customization
-
-Feel free to modify and customize this code to better suit your requirements. Whether you want to add new features, adjust command behavior, or integrate additional APIs, this code serves as a starting point for your own creative ideas. You're encouraged to make changes, experiment, and adapt the bot to your specific use cases.
+For support, feature requests, or to report bugs, please open an issue in the project repository or contact the project maintainers directly.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-To run the bot, make sure to insert your Discord bot token at the end of the `bot.py` file:
-
-```python
-bot.run('YOUR TOKEN GOES HERE')
+This project is licensed under the [MIT License](LICENSE), allowing for redistribution, use, and modification under specified terms.
